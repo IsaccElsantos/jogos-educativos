@@ -1,7 +1,11 @@
+//"Questions" indica as perguntas 
 const questions = [
     {
+        //question indica a questão a ser perguntada
         question: "Qual é o resultado de 345 + 678?",
+        //answers indica as respostas
         answers: ["1090", "1.023", "987", "1200"],
+        //correct indica a resposta correta 
         correct: 1
     },
     {

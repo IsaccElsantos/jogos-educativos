@@ -31,3 +31,27 @@ body {
     font-weight: bold;
     color: #333;
   }
+
+  #explosao-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gatinho {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transition: transform 1s ease-in-out, opacity 1s ease-out;
+}
+
+#explodir {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

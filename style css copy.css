@@ -15,6 +15,7 @@ body {
     max-width: 600px;
     margin: 100px auto 0;
     padding: 30px;
+    border-radius: 10px;
 }
 .app h1 {
     font-weight: 25px;
@@ -92,4 +93,24 @@ body {
 }
 .incorrect {
     background: #fd2121;
+}
+
+/* styles da aba regras*/
+
+.body-regras {
+    background: #d6d6d6;
+}
+
+.btn-regras {
+    background: #fdfdfd;
+    color: #000000;
+    font-weight: 700;
+    width: 100%;
+    border: 1px solid #10001d;
+    padding:  10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
 }

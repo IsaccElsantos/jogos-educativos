@@ -1,17 +1,17 @@
 const words = [
-    { hint: "Qual o plural de gato? 🐈(Digite corretamente acentuado)", word: "gatos" },
-    { hint: "Qual o plural de sol? 🌞(Digite corretamente acentuado)", word: "sóis" },
-    { hint: "Qual o plural de coração? ❤ (Digite corretamente acentuado)", word: "corações" },
-    { hint: "Qual o plural de cão? 🐕 (Digite corretamente acentudado)", word: "cães" },
-    { hint: "Qual o plral de laranja? 🍊(Digite corretamente acentuado)", word: "laranjas" }
+    { hint: "Qual o plural de gato? 🐈", word: "gatos" },
+    { hint: "Qual o plural de sol? 🌞", word: "sóis" },
+    { hint: "Qual o plural de coração? ❤", word: "corações" },
+    { hint: "Qual o plural de cão? 🐕", word: "cães" },
+    { hint: "Qual o plural de laranja? 🍊", word: "laranjas" }
   ];
-
+  
   let currentPhase = 0;
 
   function loadPhase() {
     if (currentPhase < words.length) {
       const current = words[currentPhase];
-      document.getElementById("hint").textContent = "Dica: " + current.hint;
+      document.getElementById("hint").textContent = "Responda: " + current.hint;
       document.getElementById("phaseText").textContent = `Fase ${currentPhase + 1}`;
       document.getElementById("guessInput").value = "";
       document.getElementById("result").textContent = "";
@@ -42,6 +42,24 @@ const words = [
       document.getElementById("result").style.color = "green";
       currentPhase++;
       setTimeout(loadPhase, 1000);
+
+      document.getElementById('explodir');addEventListener('click', () => {
+        const gatinhos = document.querySelectorAll('.gatinho');
+    
+        gatinhos.forEach((gatinho) => {
+            const randomX = Math.random() * 1000 - 500; // Movimento aleatório para X
+            const randomY = Math.random() * 1000 - 500; // Movimento aleatório para Y
+            const randomRotation = Math.random() * 360; // Rotação aleatória
+            const randomOpacity = Math.random() * 0.5 + 0.5; // Opacidade aleatória
+    
+            // Aplicar as transformações
+            gatinho.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${randomRotation}deg)`;
+            gatinho.style.opacity = randomOpacity;
+        });
+    });
+
+
+      
     } else {
       document.getElementById("result").textContent = "❌ Errado! Tente novamente.";
       document.getElementById("result").style.color = "red";

@@ -1,9 +1,11 @@
-const palavras = ['CASA', 'GATO', 'FLORESTA', 'BOLA', 'PEIXE'];
+const palavras = ['CASA', 'GATO', 'FLORESTA', 'CARRO', 'PEIXE'];
 let palavraCorreta = '';
 let letrasSelecionadas = '';
 
+
 function embaralhar(array) {
   return array.sort(() => Math.random() - 0.5);
+
 }
 
 function iniciarJogo() {
